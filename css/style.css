@@ -124,6 +124,9 @@ section
     text-align: end;
     padding-right: 40px;
 }
+.pepe
+{
+margin-top: 3px;}
 .titleText
 {
     font-weight: 600;
@@ -362,6 +365,7 @@ section
     position: relative;
     padding: 10px;
     text-align: center;
+    z-index: 1000000;
     }
   
     .wrap   a::before {
