@@ -361,6 +361,7 @@ section
     outline: none;
     position: relative;
     padding: 10px;
+    text-align: center;
     }
   
     .wrap   a::before {
