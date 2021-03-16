@@ -310,7 +310,8 @@ margin-top: 3px;}
     }
     .about .imgBx
     {
-        min-width: 250px;        
+        min-width: 250px;  
+        min-height: 250px;      
     }
     .btn
     {
