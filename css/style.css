@@ -78,6 +78,7 @@ section
 {
     color: #fff;
     font-size: 1.2em;
+    margin-block-end: 50px;
 }
 .btn
 {
@@ -117,6 +118,7 @@ section
     justify-content: center;
     align-items: center;
 }
+
 .about .contentBx
 {
     min-width: 50%;
@@ -146,7 +148,6 @@ margin-top: 3px;}
     width: 50%;
     min-height: 500px;
 }
-.banner2,
 .banner3
 {
     position: relative;
@@ -156,7 +157,6 @@ margin-top: 3px;}
     justify-content: center;
     align-items: center;
 }
-.banner2::before,
 .banner3::before
 {
     content: '';
@@ -168,7 +168,6 @@ margin-top: 3px;}
     z-index: 1;
     background: linear-gradient(to top, #111, transparent);
 }
-.banner2::after,
 .banner3::after
 {
     content: '';
@@ -178,74 +177,16 @@ margin-top: 3px;}
     width: 100%;
     height: 400px;
     z-index: 1;
-    background: linear-gradient(to bottom, #111, transparent);
+    background: linear-gradient(to bottom, rgba(17, 17, 17, 0.589), transparent);
 }
-.destination{
-    text-align: center;
-}
-.destination .content
-{
-    text-align: center; 
-}
-.destination .destinationList
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-.destination .destinationList .box
-{
-    position: relative;
-    min-width: 350px;
-    height: 480px;
-    background: #191919;
-    transition: 0.5s;
-    margin: 10px;
-}
-.destination .destinationList :hover .box
-{
-     opacity: 0.2;
-}
-.destination .destinationList .box :hover
-{
-     opacity: 1;
-}
-.destination .destinationList .box .imgBx
-{
-    position: relative;
-    width: 100%;
-    height: 400px;
 
-}
-.destination .destinationList .box .content
-{
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.destination .destinationList .box .content h2
-{
-    color: #fff;
-    font-weight: 500;
-    line-height: 1.2em;
-}
-.destination .destinationList .box .content h2 span
-{
-    font-size: 0.8em;
-    font-weight: 300;
-    opacity: 0.5;
-}
 .footer
 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 10000000;
 }
 .footer .sci
 {
@@ -281,6 +222,11 @@ margin-top: 3px;}
     text-decoration: none;
 
 }
+.banermobile
+{
+    visibility: hidden;
+}
+
 @media ( max-width:767px )
 {
     section
@@ -307,33 +253,53 @@ margin-top: 3px;}
         width: 100%;
         text-align: center;
         padding-right: 0px;       
+        
     }
     .about .imgBx
     {
         min-width: 250px;  
         min-height: 250px;      
+        display: none;
     }
     .btn
     {
         margin-bottom: 30px;
     }
-    .destination .destinationList .box
-    {
-        position: relative;
-        max-width: px;
-        min-width: initial;
-        width: 350px;
-        height: 400px;
-    }
-    .destination .destinationList .box .imgBx
-    {
-
-        height: 320px;
-    }
     .footer .sci li a img
     {
         filter: invert(1);
         max-width: 30px;
+    }
+    .banermobile
+    {
+        visibility: visible;
+        object-position: left;
+    }
+    .about .contentBx .text
+    {
+        text-align: left;
+    }
+    .banner2::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        z-index: 1;
+        background: linear-gradient(to bottom, rgb(17, 17, 17), transparent);
+        }
+    .banner2::after
+    {
+           content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+             width: 100%;
+            height: 200px;
+            z-index: 1;
+            background: linear-gradient(to top, #111, transparent);
     }
 
 }
@@ -343,6 +309,7 @@ margin-top: 3px;}
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10000;
   }
   
 .wrap
